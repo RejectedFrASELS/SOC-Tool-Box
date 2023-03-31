@@ -1,0 +1,12 @@
+.invalid {
+    border-color: rgb(58, 126, 31);
+}
+
+.invalid-feedback {
+    color: rgb(194, 158, 158);
+}
+
+.ml-auto {
+    margin-left: auto !important;
+  }
+  
