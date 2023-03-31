@@ -1,0 +1,2 @@
+https://rules.emergingthreats.net/blockrules/compromised-ips.txt
+https://www.malwaredomainlist.com/hostslist/delisted.txt

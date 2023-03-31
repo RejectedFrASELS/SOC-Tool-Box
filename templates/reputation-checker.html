@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+<div style="margin-left: 35%; margin-top: 15%; text-align: center;">
+    <div class="row mb-4">
+
+        <div class="col-lg-6 col-md-6 mb-md-0 mb-4">
+            <div class="card">
+                <div class="card-header pb-2">
+                    <div class="row">
+                        <br><br>
+                        <h1 style="color:rgb(7, 3, 202)">Reputation Checker</h1>
+                        <p><i>Paste your IP addresses below</i></p>
+                        <form method="POST" onsubmit="showLoading()">
+                            <textarea id="scanner" name="scanner" rows="4" cols="50"></textarea>
+                            <br>
+                            <br>
+                            <button id="submit-btn" type="submit" class="btn bg-gradient-danger">
+                                Submit
+                            </button>
+                            <br>
+                            <br>
+                            <p><a href="/ip-last-scan" class="link-dark" style="color: black;"><b>To access last scan, Click Here!</b></a></p>
+                        </form>
+                        <div id="loading" style="display:none">
+                            <img src="/static/loading.gif">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function showLoading() {
+        document.getElementById("submit-btn").style.display = "none";
+        document.getElementById("loading").style.display = "block";
+    }
+</script>
+
+{% endblock %}

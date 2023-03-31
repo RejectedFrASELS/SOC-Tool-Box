@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+  <div style="margin-left: 20%;margin-top: 5%;">
+    <div class="row mb-4">
+      <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+        <div class="card">
+          <div class="card-header pb-2">
+            <div class="row">
+              <br>
+              <h2 style="color:rgb(6, 21, 233)">Deployment <span style="color:rgb(241, 8, 8)"> Configuration</span>
+                </h1>
+                <br>
+                <form method="POST">
+                  <label for="serveraddr"> <b>Server Address</b>  </label>
+                  <input type="serveraddr" , name="serveraddr" , class="form-control" id="serveraddr"
+                    placeholder="localhost" style="border-style: inset;">
+                  <button type="submit" , name="submit_button" , value="serveraddr_submit_button"
+                    class="btn bg-gradient-info">
+                    Submit
+                  </button>
+                  <i>Needs to be redeployed after change.</i>   
+                </form>
+                <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+        <div class="card">
+          <div class="card-header pb-2">
+            <div class="row">
+              <h2 style="color:rgb(6, 21, 233)">LDAP <span style="color:rgb(241, 8, 8)"> Login</span></h1>
+                <br>
+                <form method="POST">
+                  <label for="ldapurl"><b>LDAP Server URL</b></label>
+                  <input type="ldapurl" , name="ldapurl" , class="form-control" id="ldapurl"
+                    placeholder="ldap://localhost:389" style="border-style: inset;">
+                  <button type="submit" , name="submit_button" , value="ldapurl_submit_button"
+                    class="btn bg-gradient-info">
+                    Submit
+                  </button>
+                </form>
+                <form method="POST">
+                  <label for="ldapdomain"><b>LDAP Domain</b></label>
+                  <input type="ldapdomain" , name="ldapdomain" class="form-control" id="ldapdomain"
+                    placeholder="dc=example,dc=org" style="border-style: inset;">
+                  <button type="submit" , name="submit_button" , value="ldapdomain_submit_button"
+                    class="btn bg-gradient-info">
+                    Submit
+                  </button>
+                </form>
+                <form method="POST">
+                  <label for="session_lifetime"><b>Session Lifetime in Minutes</b></label>
+                  <select class="form-control" , type="session_lifetime" , name="session_lifetime" ,
+                    id="session_lifetime" style="border-style: groove;">
+                    <option>1</option>
+                    <option>3</option>
+                    <option>5</option>
+                    <option>10</option>
+                    <option>15</option>
+                  </select>
+                  <button type="submit" , name="submit_button" , value="session_lifetime_submit_button"
+                    class="btn bg-gradient-info">
+                    Submit
+                  </button>
+                 <i>Needs to be redeployed after change.</i> 
+                </form>
+                <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+        <div class="card">
+          <div class="card-header pb-2">
+            <div class="row">
+              <h2 style="color:rgb(6, 21, 233)">Auto<span style="color:rgb(241, 8, 8)">mation</span></h2>
+              <br>
+              <form method="POST">
+                <label for="automation_url"><b>Add Automation URL</b></label>
+                <input type="automation_url" , name="automation_url" class="form-control" id="automation_url"
+                  placeholder="https://rules.emergingthreats.net/blockrules/compromised-ips.txt"  style="border-style: inset;" >
+                <button type="submit" , name="submit_button" , value="automation_url_submit_button"
+                  class="btn bg-gradient-info">
+                  Add 
+                </button>
+                <a href="/cronlinks-db" class="link-secondary">Manage Automation URLs</a>
+              </form>
+              <form method="POST">
+                <label for="cron_interval"><b>Automation Interval in Minutes</b></label>
+                <select class="form-control" , name="cron_interval" id="cron_interval" style="border-style: groove;">
+                  <option>1</option>
+                  <option>3</option>
+                  <option>5</option>
+                  <option>10</option>
+                  <option>15</option>
+                </select>
+                <button type="submit" , name="submit_button" , value="cron_interval_submit_button"
+                  class="btn bg-gradient-info">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+        <div class="card">
+          <div class="card-header pb-2">
+            <div class="row">
+              <br>
+              <h2 style="color:rgb(6, 21, 233)">IP Check <span style="color:rgb(241, 8, 8)">Tool</span></h1>
+                <br>
+                <form method="POST">
+                  <label for="api_key"><b>Add API Key</b></label>
+                  <input type="api_key" , name="api_key" , class="form-control" id="api_key" placeholder=""  style="border-style: inset;">
+                  <button type="submit" , name="submit_button" , value="api_key_submit_button"
+                    class="btn bg-gradient-info">
+                  Add  
+                  </button>
+                  <a href="/apikey-db" class="link-secondary">Manage API Keys</a>
+                </form>
+                <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:right;">
+      <a href="/configs-db" class="link-secondary"><i>See running configurations</i></a>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+<div style="margin-left: 35%; margin-top: 15%; text-align: center"> 
+  <div class="row mb-4">
+    <div class="col-lg-6 col-md-6 mb-md-0 mb-4">
+      <div class="card">
+        <div class="card-header pb-2">
+          <div class="row">
+            <br><br>
+
+            <h1 style="color:rgb(0, 0, 0)">White<span style="color: rgb(7, 3, 202)">list</span></h1>
+
+            <form method="POST">
+              <!--<label>Choose an option:</label>
+        <br>
+        <input type="radio" id="ip" name="input_type" value="ip" checked="checked">
+        <label for="ip">IP Address</label><br>
+        <input type="radio" id="url" name="input_type" value="url">
+        <label for="url">URL</label><br>
+        <input type="radio" id="hash" name="input_type" value="hash">
+        <label for="hash">Hash</label> -->
+              <br>
+              <p><i>Paste below</i></p>
+              <textarea id="whitelist" name="whitelist" rows="4" cols="50"></textarea>
+              <br><br>
+              <button type="submit" , name="submit_button" , value="save-to-txt" class="btn bg-gradient-info">
+                Submit
+              </button>
+              <button type="submit" , name="submit_button" , value="download-csv" class="btn bg-gradient-info">
+                Submit and Download as a CSV File
+              </button>
+              <br>
+              <br>
+              <p><a href="/whitelist-db" class="link-dark"><b>To access Whitelist Database, Click Here!</b></a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+
+<div style="margin-left: 35%; margin-top: 10%; text-align: center">
+  <div class="row mb-4">
+    <div class="col-lg-6 col-md-6 mb-md-0 mb-4">
+      <div class="card">
+        <div class="card-header pb-2">
+          <div class="row">
+
+            <br><br>
+            <h1 style="color:black">Black<span style="color:rgb(223, 27, 27)">list</span></h1>
+
+            <form method="POST">
+              <label>Choose an option:</label>
+              <br>
+              <input type="radio" id="ip" name="input_type" value="ip" checked="checked">
+              <label for="ip">IP Address</label><br>
+              <input type="radio" id="domain" name="input_type" value="domain">
+              <label for="domain">Domain</label><br>
+              <input type="radio" id="hash" name="input_type" value="hash">
+              <label for="hash">Hash</label>
+              <br>
+              <br>
+              <p>Paste below</p>
+              <textarea id="blacklist" name="blacklist" rows="4" cols="50"></textarea>
+              <br><br>
+              <button type="submit" , name="submit_button" , value="save-to-txt" class="btn btn-danger">
+                Submit
+              </button>
+              <button type="submit" , name="submit_button" , value="download-csv" class="btn btn-danger">
+                Submit and View as a List
+              </button>
+              <br>
+              <i>Total Blacklisted: {{ totalblacklisted }}!</i>
+              <br>
+              <p><a href="/blacklist-db" class="link-danger" style="color: rgb(223, 27, 27);"><b>To access Blacklist Database, Click Here!</b></a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

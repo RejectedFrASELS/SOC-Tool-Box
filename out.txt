@@ -1,0 +1,29 @@
+Scan started by admin at 2023-03-31 20:57:50 
+==================================================
+IP Address: 138.2.168.120
+AS Owner: ORACLE-BMC-31898
+Last Analysis Stats:
+	harmless: 85
+	malicious: 0
+	suspicious: 0
+	undetected: 0
+	timeout: 0
+==================================================
+IP Address: 185.141.34.114
+AS Owner: Dgn Teknoloji A.s.
+Last Analysis Stats:
+	harmless: 85
+	malicious: 0
+	suspicious: 0
+	undetected: 0
+	timeout: 0
+==================================================
+IP Address: 8.8.8.8
+AS Owner: GOOGLE
+Last Analysis Stats:
+	harmless: 68
+	malicious: 1
+	suspicious: 1
+	undetected: 16
+	timeout: 0
+==================================================

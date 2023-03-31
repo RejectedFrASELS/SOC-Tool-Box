@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!--Dashboard-->
+
+<body class="g-sidenav-show  bg-gray-200" style="margin-left: 20%;">
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-0 shadow-none border-radius-xl" id="navbarBlur"
+      data-scroll="true">
+      <div class="container-fluid py-3 px-0">
+        <nav aria-label="breadcrumb">
+          <h2 class="font-weight-bolder mb-0" style="color: black;">Dashboard</h2>
+        </nav>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="card-header">
+      <h3 style="color: rgb(80, 85, 129);"><i>Hi {{ username }}!</i></h3>
+    </div>
+  </main>
+</body>
+
+{% endblock %}
